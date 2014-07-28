@@ -7,6 +7,8 @@ After installation usage :
 
 RPM packages add "syncthing" and "syncthing@.service" that allow you to run "syncthing" service for each user and create their own config file with that way syncthing will not conflict with other conf files.
 
+Username part will be your username in your system.
+
 To start service (as root)
 
 systemctl start syncthing@username.service
@@ -22,5 +24,10 @@ systemctl enable syncthing@username.service
 
 
 Website : http://syncthing.net/
+
 Forum : https://discourse.syncthing.net/
+
+Getting Started : https://discourse.syncthing.net/t/getting-started/
+
 License : MIT
+
