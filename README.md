@@ -1,4 +1,4 @@
-Syncthing RPM Package for RPM
+Syncthing RPM Package for Fedora
 =============
 
 This repository allow you to do make to RPM package for Syncthing on Fedora Systems.I also created first RPM package for i686/x64 and added to RPMS folder If you wanna install syncthing servis to system for your own usage. 
