@@ -11,14 +11,14 @@
 %endif
 
 Name:syncthing
-Version:0.8.21
-Release:1%{?dist}
+Version:0.9.0
+Release:1.1%{?dist}
 Summary:Syncthing
 License:MIT
 URL:http://syncthing.net/    
 Source0:https://github.com/calmh/%{name}/releases/download/v%{version}/%{name}-linux-%{altarch}-v%{version}.tar.gz
 Source1:	syncthing@.service
-
+Source2:	%{name}-linux-386-v%{version}.tar.gz
 ExclusiveArch:  x86_64 %{ix86}
 BuildRequires:  systemd
 
