@@ -11,7 +11,7 @@
 %endif
 
 Name:syncthing
-Version:0.9.0
+Version:0.9.4
 Release:1.1%{?dist}
 Summary:Syncthing
 License:MIT
