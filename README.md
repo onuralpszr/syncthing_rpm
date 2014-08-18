@@ -22,6 +22,11 @@ To enable on boot
 systemctl enable syncthing@username.service
 
 
+Fedora Repository Installation
+
+
+Fedora Copr Repository : http://copr.fedoraproject.org/coprs/thunderbirdtr/Syncthing_for_Fedora/
+
 
 Website : http://syncthing.net/
 
