@@ -11,8 +11,8 @@
 %endif
 
 Name:syncthing
-Version:0.9.5
-Release:1.3%{?dist}
+Version:0.9.8
+Release:1.4%{?dist}
 Summary:Syncthing
 License:MIT
 URL:http://syncthing.net/    
@@ -56,20 +56,22 @@ install -p -m 0644 %{S:1} %{buildroot}%{_unitdir}
 %systemd_postun_with_restart %{name}@.service 
 
 %files
-%doc  %{name}-linux-%{altarch}-v%{version}/README.md %{name}-linux-%{altarch}-v%{version}/LICENSE %{name}-linux-%{altarch}-v%{version}/CONTRIBUTORS
+%doc  %{name}-linux-%{altarch}-v%{version}/README.txt %{name}-linux-%{altarch}-v%{version}/LICENSE.txt %{name}-linux-%{altarch}-v%{version}/CONTRIBUTORS.txt
 %{_bindir}/syncthing
 %{_unitdir}/%{name}@.service
 
 
-
 %changelog
 
-* Sat Aug 17 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.5-1.3
+* Sat Aug 25 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.8-4
+- Version updated to v0.9.8
+
+* Sat Aug 17 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.5-3
 - Version updated to v0.9.5
 
-* Sat Aug 16 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.4-1.2
+* Sat Aug 16 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.4-2
 - Version updated to v0.9.4
 
-* Mon Jul 28 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.8.21-1.1
+* Mon Jul 28 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.8.21-1
 - Initial Version
 
