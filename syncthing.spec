@@ -11,8 +11,8 @@
 %endif
 
 Name:syncthing
-Version:0.9.9
-Release:1.5%{?dist}
+Version:0.9.10
+Release:1.6%{?dist}
 Summary:Syncthing
 License:MIT
 URL:http://syncthing.net/    
@@ -50,7 +50,7 @@ install -p -m 0644 %{S:1} %{buildroot}%{_unitdir}
 %systemd_post %{name}@.service
 
 %preun
-%systemd_preun %{name}@.service
+%systemd_preun %{name}@.servie
 
 %postun
 %systemd_postun_with_restart %{name}@.service 
@@ -62,18 +62,22 @@ install -p -m 0644 %{S:1} %{buildroot}%{_unitdir}
 
 
 %changelog
-* Sat Aug 25 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.9-5
+* Mon Sep 1 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.10-6
+- Version updated to v0.9.10
+- Spec files dates fixed and re-checked.
+
+* Sun Aug 27 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.9-5
 - Version updated to v0.9.9
 - Readme fixes
 - Source folder path fixed
 
-* Sat Aug 25 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.8-4
+* Thu Aug 25 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.8-4
 - Version updated to v0.9.8
 
-* Sat Aug 17 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.5-3
+* Wed Aug 17 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.5-3
 - Version updated to v0.9.5
 
-* Sat Aug 16 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.4-2
+* Tue Aug 16 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.4-2
 - Version updated to v0.9.4
 
 * Mon Jul 28 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.8.21-1
