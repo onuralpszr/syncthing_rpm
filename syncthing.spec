@@ -11,8 +11,8 @@
 %endif
 
 Name:syncthing
-Version:0.9.14
-Release:1.8%{?dist}
+Version:0.9.15
+Release:1.9%{?dist}
 Summary:Syncthing
 License:MIT
 URL:http://syncthing.net/    
@@ -62,6 +62,9 @@ install -p -m 0644 %{S:1} %{buildroot}%{_unitdir}
 
 
 %changelog
+* Fri Sep 12 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.15-9
+- Version update to v0.9.15
+
 * Wed Sep 10 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.14-8
 - Version updated to v0.9.14
 - Spec files fixed
