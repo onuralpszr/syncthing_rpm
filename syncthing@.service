@@ -6,7 +6,7 @@ Type=simple
 User=%I
 Environment=STNORESTART=yes
 ExecStart=/usr/bin/syncthing
-Restart=on-success
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
