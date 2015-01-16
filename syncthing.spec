@@ -11,8 +11,8 @@
 %endif
 
 Name:syncthing
-Version:0.9.17
-Release:2.0%{?dist}
+Version:0.10.20
+Release:1%{?dist}
 Summary:Syncthing
 License:MIT
 URL:http://syncthing.net/    
@@ -40,7 +40,7 @@ Using syncthing, that control is returned to you.
 rm -rf %{buildroot}
 
 mkdir -p %{buildroot}%{_bindir}
-install -p -m 0755 %{name}-linux-%{altarch}-v%{version}/syncthing %{buildroot}%{_bindir}
+install -p -m 0755 -g wheel %{name}-linux-%{altarch}-v%{version}/syncthing %{buildroot}%{_bindir}
 
 mkdir -p %{buildroot}%{_unitdir}
 install -p -m 0644 %{S:1} %{buildroot}%{_unitdir}
@@ -50,44 +50,32 @@ install -p -m 0644 %{S:1} %{buildroot}%{_unitdir}
 %systemd_post %{name}@.service
 
 %preun
-%systemd_preun %{name}@.servie
+%systemd_preun %{name}@.service
 
 %postun
 %systemd_postun_with_restart %{name}@.service 
 
 %files
-%doc  %{name}-linux-%{altarch}-v%{version}/README.txt %{name}-linux-%{altarch}-v%{version}/LICENSE.txt %{name}-linux-%{altarch}-v%{version}/CONTRIBUTORS.txt
+%doc  %{name}-linux-%{altarch}-v%{version}/README.txt %{name}-linux-%{altarch}-v%{version}/LICENSE.txt %{name}-linux-%{altarch}-v%{version}/AUTHORS.txt
 %{_bindir}/syncthing
 %{_unitdir}/%{name}@.service
 
 
 %changelog
-* Sat Sep 20 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.17-2.0
-- Version update to v0.9.17
+* Fri Jan 16 2015 Joris Claassen <joris@claassen.co> 0.10.20-6
+- Updated for FC21
+- Version updated to v0.10.20
+- Changed group permissions for auto-updater to work for all users with sudo rights (wheel group)
 
-* Fri Sep 12 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.15-9
-- Version update to v0.9.15
-
-* Wed Sep 10 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.14-8
-- Version updated to v0.9.14
-- Spec files fixed
-
-* Tue Sep 9 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.13-7
-- Version updated to v0.9.13
-
-* Mon Sep 1 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.10-6
-- Version updated to v0.9.10
-- Spec files dates fixed and re-checked.
-
-* Wed Aug 27 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.9-5
+* Sat Aug 25 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.9-5
 - Version updated to v0.9.9
 - Readme fixes
 - Source folder path fixed
 
-* Mon Aug 25 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.8-4
+* Sat Aug 25 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.8-4
 - Version updated to v0.9.8
 
-* Sun Aug 17 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.5-3
+* Sat Aug 17 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.5-3
 - Version updated to v0.9.5
 
 * Sat Aug 16 2014 Onuralp SEZER <thunderbirdtr@fedoraproject.org> 0.9.4-2

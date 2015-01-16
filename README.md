@@ -34,5 +34,5 @@ Forum : https://discourse.syncthing.net/
 
 Getting Started : https://discourse.syncthing.net/t/getting-started/
 
-License : MIT
+License : GPLv3
 
