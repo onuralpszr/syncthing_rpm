@@ -62,7 +62,7 @@ install -p -m 0644 %{S:1} %{buildroot}%{_unitdir}
 
 
 %changelog
-* Fri Jan 16 2015 Joris Claassen <joris@claassen.co> 0.10.20-6
+* Fri Jan 16 2015 Joris Claassen <joris@claassen.co> 0.10.20-1
 - Updated for FC21
 - Version updated to v0.10.20
 - Changed group permissions for auto-updater to work for all users with sudo rights (wheel group)
