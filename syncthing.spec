@@ -3,8 +3,8 @@
 %{!?go_arches: %define go_arches %{ix86} x86_64 %{arm}}
 
 Name:syncthing
-Version:0.9.17
-Release:2.1%{?dist}
+Version:0.11.25
+Release:1%{?dist}
 Summary:Syncthing
 License:MIT
 URL:http://syncthing.net/    
@@ -63,6 +63,9 @@ install -p -m 0644 ./etc/linux-systemd/system/syncthing@.service %{buildroot}%{_
 
 
 %changelog
+* Mon Sep 21 2015 Vladimir Rusinov <vrusinov@google.com> 0.11.25-1
+- Version update to v0.11.25.
+
 * Mon Sep 21 2015 Vladimir Rusinov <vrusinov@google.com> 0.9.17-2.1
 - Use source tarball instead of binary package.
 
